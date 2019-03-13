@@ -1,0 +1,11 @@
+<h1 class="govuk-heading-xl">Request a juggling license</h1>
+
+<p class="govuk-body-l">Existing licenses:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+<% @licenses.each do |l| %>
+    <li><%= l.number_of_balls %> for <%= l.duration %> days</li>
+<% end %>
+</ul>
+
+<%= link_to "Start", new_license_path, {class: "govuk-button govuk-button--start"} %>
