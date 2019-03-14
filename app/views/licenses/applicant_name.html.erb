@@ -1,0 +1,11 @@
+<h1 class="govuk-heading-xl">What's your name?</h1>
+
+<%= form_for @license, url: wizard_path, method: :put do |f| %>
+
+  <%=  f.text_field :applicant  %>
+
+  <%= f.submit "Continue" %>
+
+<% end %>
+
+<%= link_to 'Skip', next_wizard_path %>

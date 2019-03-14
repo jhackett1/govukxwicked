@@ -1,3 +1,3 @@
 class License < ApplicationRecord
-    validates :number_of_balls, :duration, presence: true
+    validates :duration, presence: true
 end

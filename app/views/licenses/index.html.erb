@@ -1,11 +1,13 @@
-<h1 class="govuk-heading-xl">Request a juggling license</h1>
+<h1 class="govuk-heading-xl">All licenses:</h1>
 
-<p class="govuk-body-l">Existing licenses:</p>
-
-<ul class="govuk-list govuk-list--bullet">
+<ol class="govuk-list govuk-list--bullets">
 <% @licenses.each do |l| %>
-    <li><%= l.number_of_balls %> for <%= l.duration %> days</li>
+    <li>
+        <%= l.applicant %>: <%= l.number_of_balls %> balls for <%= l.duration %> days 
+    </li>
 <% end %>
-</ul>
+</ol>
 
-<%= link_to "Start", new_license_path, {class: "govuk-button govuk-button--start"} %>
+
+
+<%= link_to "Apply for a license (Wicked)", wizard_path(:applicant_name), {class: "govuk-button govuk-button--start"} %>

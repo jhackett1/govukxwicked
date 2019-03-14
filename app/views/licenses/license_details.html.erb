@@ -1,0 +1,12 @@
+<h1 class="govuk-heading-xl">Details about your license</h1>
+
+<%= form_for @license, url: wizard_path, method: :put do |f| %>
+
+  <%=  f.number_field :number_of_balls  %>
+  <%=  f.number_field :duration  %>
+
+  <%= f.submit "Submit" %>
+  
+<% end %>
+
+<%= link_to 'Skip', next_wizard_path %>
